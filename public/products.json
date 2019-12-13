@@ -1,39 +1,70 @@
 {
-  "products": [{
+  "products": [
+    {
       "id": "1",
-      "name": "Cherry",
+      "name": "All",
       "image": "images/Cherry.png",
-      "price": "$1.99",
-      "colors": ["red", "green", "blue"],
-      "condition": "Fresh",
       "description": "Two Cherries"
     },
     {
       "id": "2",
-      "name": "Orange",
+      "name": "General knowledge",
       "image": "images/Orange.png",
-      "price": "$2.99",
-      "colors": ["green", "blue"],
-      "condition": "Frozen",
       "description": "Giant Orange"
     },
     {
       "id": "3",
-      "name": "Nuts",
-      "image": "images/Nuts.png",
-      "price": "$1.00",
-      "colors": ["red"],
-      "condition": "Frozen",
-      "description": "Mixed Nuts"
+      "name": "Current Affairs",
+      "image": "images/Cherry.png",
+      "description": "Two Cherries"
     },
     {
       "id": "4",
-      "name": "Strawberry",
-      "image": "images/Strawberry.png",
-      "price": "$1.49",
-      "colors": ["blue"],
-      "condition": "Fresh",
-      "description": "Just Strawberry"
+      "name": "Sports",
+      "image": "images/Orange.png",
+      "description": "Giant Orange"
+    },
+    {
+      "id": "5",
+      "name": "Politics",
+      "image": "images/Cherry.png",
+      "description": "Two Cherries"
+    },
+    {
+      "id": "6",
+      "name": "Entertainment",
+      "image": "images/Orange.png",
+      "description": "Giant Orange"
+    },
+    {
+      "id": "7",
+      "name": "Technology",
+      "image": "images/Cherry.png",
+      "description": "Two Cherries"
+    },
+    {
+      "id": "8",
+      "name": "Spritiual",
+      "image": "images/Orange.png",
+      "description": "Giant Orange"
+    },
+    {
+      "id": "9",
+      "name": "Startups",
+      "image": "images/Cherry.png",
+      "description": "Two Cherries"
+    },
+    {
+      "id": "10",
+      "name": "Environment",
+      "image": "images/Orange.png",
+      "description": "Giant Orange"
+    },
+    {
+      "id": "11",
+      "name": "World Affairs",
+      "image": "images/Orange.png",
+      "description": "Giant Orange"
     }
   ]
 }

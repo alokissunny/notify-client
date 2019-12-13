@@ -9,6 +9,9 @@ class Categories extends Component {
     this.props.actions.getProducts()
   }
 
+  route(){
+    this.props.history.push('/topic')
+  }
   render() {
     const {products, actions} = this.props;
     const compareProducts = products.filter(product => product.compare);
