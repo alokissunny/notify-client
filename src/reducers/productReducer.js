@@ -1,7 +1,8 @@
 import * as types from '../constants/types'
 
 const INITIAL_STATE = {
-  products: []
+  products: [],
+  // topics : []
 };
 
 export default function (state = INITIAL_STATE, action) {

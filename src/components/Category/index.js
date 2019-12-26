@@ -8,7 +8,7 @@ const Category = ({product, compare}) =>
         <div className={"product " + (product.compare ? "compare" : "")} >
             <img src={product.image} alt={product.name} />
             <div className="image_overlay"/>
-           <Link to={'/topic?'+product.id}>
+           <Link to={'/topic/'+product.id}>
             <div className="view_details" onClick={() => compare(product)}>
               {product.compare ? "Remove" : "Explore"}
             </div>

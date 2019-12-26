@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
 import {Route, Switch} from 'react-router-dom'
 
-import {Home, NotFound, Categories} from '../'
-
+import {Home, NotFound, Categories , Topics} from '../'
+import {initfirebase} from '../../config/initfirebase';
 class App extends Component {
+  constructor() {
+    super();
+    // initfirebase();
+  }
   render() {
     return (
       <div className="app">
@@ -12,6 +16,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/cat" component={Categories}/>
+            <Route exact path="/topic/:id" component={Topics}/>
             <Route component={NotFound}/>
           </Switch>
           <div>FOOTER</div>
