@@ -19,7 +19,7 @@ class Topics extends Component {
   // [END set_public_vapid_key]
     constructor(){
         super();
-        this.messaging.usePublicVapidKey('BBTg4vQulhTEZIeX6bk-_PvUTcTFj6T9u29n3LXyvM2flRaOPpsBzIyCVuPTN_qd9FXcbf6ckR9fABUTJuNhDZ4');
+        // this.messaging.usePublicVapidKey('BBTg4vQulhTEZIeX6bk-_PvUTcTFj6T9u29n3LXyvM2flRaOPpsBzIyCVuPTN_qd9FXcbf6ckR9fABUTJuNhDZ4');
         // initfirebase();
         console.log(this.messaging)
     }

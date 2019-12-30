@@ -1,4 +1,5 @@
 import * as firebase from "firebase/app";
+import '@firebase/messaging';
 
 
 export const initfirebase = () => {
@@ -11,5 +12,9 @@ export const initfirebase = () => {
     "projectId": "test-285b5",
     "storageBucket": "test-285b5.appspot.com"
   });
-  console.log('firebase initialised')
+  console.log('firebase initialised');
+
+  var messaging = firebase.messaging();
+  messaging.usePublicVapidKey('BBTg4vQulhTEZIeX6bk-_PvUTcTFj6T9u29n3LXyvM2flRaOPpsBzIyCVuPTN_qd9FXcbf6ckR9fABUTJuNhDZ4');
+  console.log('messaging initialised');
 }

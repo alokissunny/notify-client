@@ -34,6 +34,7 @@ const store = createStore(
   )
 );
 initfirebase();
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
