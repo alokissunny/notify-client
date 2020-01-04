@@ -1,33 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.css'
 import {
     Link,
   } from "react-router-dom";
   import * as firebase from "firebase/app";
   import '@firebase/messaging';
+import ReactCardFlip from 'react-card-flip';
 
 const url = 'http://localhost:3001/subscribe/'
 const Topic = ({data , permissionHandler}) => {
+   const  [isFlipped , setFlipped]= useState(false);
     var messaging = firebase.messaging();
 
     function topicClickHnadler() {
         console.log("checking permission");
-       switch (Notification.permission) {
-           case 'granted':
-            permissionHandler(false);
-            //retrieve token
-            retrieveToken();
-               break;
-            case 'denied':
-                console.log('DENIED!!!!!!!!!!!');
-                break;
-            case 'default':
-                permissionHandler(true)
-                break;
+        setFlipped(!isFlipped);
+        //temp commented
+      //  switch (Notification.permission) {
+      //      case 'granted':
+      //       permissionHandler(false);
+      //       //retrieve token
+      //       retrieveToken();
+      //          break;
+      //       case 'denied':
+      //           console.log('DENIED!!!!!!!!!!!');
+      //           break;
+      //       case 'default':
+      //           permissionHandler(true)
+      //           break;
        
-           default:
-               break;
-       }
+      //      default:
+      //          break;
+      //  }
         //   requestPermission();
 
         //show notification UI if not approved
@@ -86,19 +90,24 @@ const Topic = ({data , permissionHandler}) => {
     }
     
     return (
-        <div key={data._id} className='topic' onClick={topicClickHnadler} >
-            <div>
-                {data.name}
+      <ReactCardFlip key={data._id} isFlipped={isFlipped} flipDirection="horizontal">
+        <div  className ={'topic'}  onClick={topicClickHnadler}>
+         <img style={{width : '100px' , height: '100px' }} src={'/images/Nuts.png'}></img>
+        </div>
+        <div className ={'topic'}   onClick={topicClickHnadler}>
+          <div style={{width : '100px'}}>
+               Name:  {data.name}
             </div>
             <div>
-            {data.providerName}
-          
+            Issuer : {data.providerName}
             </div>
             <div>
-             {data.details}
+            See More :  {data.details}
             </div>
         </div>
+       
 
+        </ReactCardFlip>
     )
 }
 

@@ -3,7 +3,8 @@ import {bindActionCreators} from 'redux'
 import {Compare, ProductList} from '../../components'
 import * as productActions from '../../actions/product'
 import {connect} from 'react-redux'
-
+import HotTopics from '../HotTopics';
+import './styles.css';
 class Home extends Component {
   componentWillMount() {
     this.props.actions.getProducts()
@@ -14,7 +15,15 @@ class Home extends Component {
     const compareProducts = products.filter(product => product.compare);
 
     return (
-      <div className="home mt-5">
+      <div className="home mt-5"> 
+      <div style={{"padding-top" : "40px"}}>
+       Trending Topics
+       </div>
+        <div className="Hot">
+         
+        <HotTopics></HotTopics>
+        </div>
+        Categories
         <ProductList products={products} compare={actions.compare}/>
         {compareProducts.length >= 2 &&
           <Compare products={compareProducts}/>

@@ -13,13 +13,11 @@ const Category = ({product, compare}) =>
               {product.compare ? "Remove" : "Explore"}
             </div>
             </Link>
-            <div className="stats">
+            {/* <div className="stats">
                 <div className="stats-container">
-                    {/* <span className="product_price">{product.price}</span> */}
                     <span className="product_name">{product.name}</span>
-                    {/* <p>{product.description}</p> */}
                 </div>
-            </div>
+            </div> */}
         </div>
     </div>;
 

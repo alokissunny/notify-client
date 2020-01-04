@@ -73,7 +73,7 @@ class Topics extends Component {
 
     render() {
         console.log('render ',this.props.topics);
-        return <div> Hello Topics
+        return <div className={'Topics'}> 
         {this.props.topics.map(topic => {
             return <Topic key={topic._id}  data = {topic} permissionHandler = {this.props.updatePermission}/>
         })}
